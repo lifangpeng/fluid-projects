@@ -1,0 +1,77 @@
+{
+  "scenario": "cooling_off",
+  "functions": [
+    {
+      "node": "cooling",
+      "function": "cooling",
+      "reachable": false,
+      "flow_m3s": 0,
+      "pressure_pa": 100000.0,
+      "min_flow_m3s": 0.0005,
+      "min_pressure_pa": 100000.0,
+      "functional": false,
+      "reason": "unreachable",
+      "topology_path": []
+    },
+    {
+      "node": "process",
+      "function": "process",
+      "reachable": true,
+      "flow_m3s": 0.0007071067811865475,
+      "pressure_pa": 100000.0,
+      "min_flow_m3s": 0.0003,
+      "min_pressure_pa": 80000.0,
+      "functional": true,
+      "reason": null,
+      "topology_path": [
+        "main",
+        "process_branch"
+      ]
+    }
+  ],
+  "reliability": 0.5,
+  "reachable_nodes": [
+    "junction",
+    "process",
+    "source"
+  ],
+  "solution": {
+    "scenario": "cooling_off",
+    "converged": true,
+    "iterations": 2,
+    "residual": 0.0,
+    "nodes": {
+      "source": 500000.0,
+      "junction": 400000.0,
+      "cooling": 100000.0,
+      "process": 100000.0
+    },
+    "edges": {
+      "main": {
+        "from": "source",
+        "to": "junction",
+        "enabled": true,
+        "flow_m3s": 0.0007071067811865475,
+        "pressure_drop_pa": 100000.0,
+        "velocity_mps": 2.2507907903927653
+      },
+      "cooling_branch": {
+        "from": "junction",
+        "to": "cooling",
+        "enabled": false,
+        "flow_m3s": 0.0,
+        "pressure_drop_pa": 300000.0,
+        "velocity_mps": 0.0
+      },
+      "process_branch": {
+        "from": "junction",
+        "to": "process",
+        "enabled": true,
+        "flow_m3s": 0.0007071067811865475,
+        "pressure_drop_pa": 300000.0,
+        "velocity_mps": 9.003163161571061
+      }
+    },
+    "warnings": []
+  }
+}

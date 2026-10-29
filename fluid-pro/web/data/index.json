@@ -1,0 +1,6 @@
+{
+  "scenarios": [
+    "normal",
+    "cooling_off"
+  ]
+}

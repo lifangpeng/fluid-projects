@@ -1,0 +1,21 @@
+{
+  "method": "Independent parallel/series reduction: g=sum(1/sqrt(R_branch)); dp=400000/(1+R_main*g^2)",
+  "scenarios": {
+    "normal": {
+      "junction_pressure_pa": 250953.08489320357,
+      "flows_m3s": {
+        "main": 0.0011159007910804537,
+        "cooling_branch": 0.0006143148315261556,
+        "process_branch": 0.000501585959554298
+      }
+    },
+    "cooling_off": {
+      "junction_pressure_pa": 400000.0,
+      "flows_m3s": {
+        "main": 0.0007071067811865475,
+        "cooling_branch": 0,
+        "process_branch": 0.0007071067811865475
+      }
+    }
+  }
+}
